@@ -61,9 +61,9 @@ a{text-decoration:none;color:inherit}
 .phone-frame::before{content:"";position:absolute;inset:6px;border-radius:26px;border:2px solid rgba(255,255,255,.12);z-index:2;pointer-events:none}
 .phone-notch{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:40%;height:16px;background:rgba(0,0,0,.75);border-radius:0 0 12px 12px;z-index:4}
 .video-host{position:absolute;inset:0;z-index:1;overflow:hidden}
-.video-host iframe{width:100%;height:100%;border:none}
-@media(max-width:640px){.phone-video-grid{grid-template-columns:1fr;gap:18px}.phone-card{width:min(240px,85vw)}.video-host iframe{pointer-events:none}.tap-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100px;height:100px;border-radius:50%;z-index:5;cursor:pointer}}
-@media(min-width:641px){.tap-center{display:none}}
+.video-host iframe,.video-host video{width:100%;height:100%;border:none;object-fit:cover}
+@media(max-width:640px){.phone-video-grid{grid-template-columns:1fr;gap:18px}.phone-card{width:min(240px,85vw)}.video-host iframe{pointer-events:none}}
+.tap-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;border-radius:50%;z-index:5;cursor:pointer;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;transition:transform .15s}.tap-center:hover{transform:translate(-50%,-50%) scale(1.08)}.tap-center::after{content:'';border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent #fff;margin-left:4px}
 .mapa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:32px}
 .mapa-card{background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:28px 18px;text-align:center;transition:border-color 0.2s,box-shadow 0.2s}
 .mapa-card:hover{border-color:var(--verde);box-shadow:0 4px 16px rgba(5,150,105,0.12)}
@@ -178,9 +178,9 @@ footer a{color:var(--verde);text-decoration:underline}
     <h2 class="secao-titulo">Veja Alguns <span class="destaque">Modelos</span></h2>
     <p class="secao-sub">Exemplos reais do que você vai receber para postar</p>
     <section class="phone-video-section"><div class="phone-video-grid">
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/ea0af8ad-0ac5-41f6-9dad-0e24b8e18f60" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/32d711d3-57de-4664-8465-42d8a826d6a3" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/c5b51179-c407-4944-97ea-1fbf054f2bb6" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
+    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="video-demo-1.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
+    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="video-demo-2.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
+    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="video-demo-3.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
     </div></section>
   </div>
 </section>
@@ -252,9 +252,9 @@ footer a{color:var(--verde);text-decoration:underline}
       <img src="depo_3.webp" alt="Depoimento 3" loading="lazy"><img src="depo_4.webp" alt="Depoimento 4" loading="lazy">
     </div>
     <section class="phone-video-section"><div class="phone-video-grid">
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/efbdc61e-2318-4715-bcca-4e00c4b338ea" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/a90b96e8-a62b-4465-ae68-37d4217ff71d" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/9b03d38d-e921-4ab2-bb96-714bf0ddc717" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
+    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-1.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
+    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-2.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
+    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-3.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
     </div></section>
   </div>
 </section>
@@ -329,7 +329,7 @@ footer a{color:var(--verde);text-decoration:underline}
 </footer>
 
 <script>
-function ativarVideo(el){const frame=el.closest('.phone-frame');const iframe=frame.querySelector('iframe');iframe.style.pointerEvents='auto';el.style.display='none';}
+function ativarVideo(el){const frame=el.closest('.phone-frame');const media=frame.querySelector('video,iframe');if(media.tagName==='VIDEO'){media.muted=false;media.play();}else{media.style.pointerEvents='auto';}el.style.display='none';}
 function toggleFaq(btn){const item=btn.closest('.faq-item');const aberto=item.classList.contains('aberto');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('aberto'));if(!aberto)item.classList.add('aberto');}
 window.onload=()=>{document.querySelectorAll("a").forEach(link=>{if(link.href&&link.href.includes("kirvano")){let params=document.location.search.replace("?","");link.href=link.href+(link.href.indexOf("?")>0?"&":"?")+params;}});};
 </script>
