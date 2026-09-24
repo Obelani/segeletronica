@@ -126,19 +126,48 @@ footer{border-top:1px solid var(--borda);padding:24px 20px;text-align:center;col
 footer a{color:var(--verde);text-decoration:underline}
 .text-center{text-align:center}.mt-32{margin-top:32px}.mt-24{margin-top:24px}
 @media(max-width:640px){.secao{padding:48px 16px}.hero{padding:44px 16px 32px}.mapa-card h3{font-size:15.6px}.mapa-card p{font-size:14.4px}.mapa-card .letra{font-size:24px}.como-funciona-img{max-width:100%;border-radius:8px}.bonus-grid{grid-template-columns:1fr;gap:16px}.bonus-grid img{width:100%}}
+
+.preco-riscado{font-size:16px;color:var(--cinza-texto);text-decoration:line-through;font-weight:600}
+.selo-seguranca{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+.selo-seguranca span{display:inline-flex;align-items:center;gap:4px;background:var(--verde-claro);padding:5px 12px;border-radius:999px;font-weight:700;color:var(--verde-hover);font-size:11.5px}
+.cta-preco-mini{font-size:13.5px;color:var(--cinza-texto);margin-bottom:10px;text-align:center}
+.cta-preco-mini strong{color:var(--verde);font-size:16px}
+.lista-cta-wrap{text-align:center;margin-top:28px}
+.depo-carrossel-wrap{max-width:608px;margin:28px auto 0;overflow:hidden;position:relative}
+.depo-carrossel-wrap::before,.depo-carrossel-wrap::after{content:"";position:absolute;top:0;bottom:0;width:32px;z-index:2;pointer-events:none}
+.depo-carrossel-wrap::before{left:0;background:linear-gradient(90deg,var(--branco),transparent)}
+.depo-carrossel-wrap::after{right:0;background:linear-gradient(270deg,var(--branco),transparent)}
+.depo-carrossel-track{display:flex;gap:14px;width:max-content;animation:depo-scroll 28s linear infinite}
+.depo-carrossel-wrap:hover .depo-carrossel-track{animation-play-state:paused}
+@keyframes depo-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.depo-card-mini{flex:0 0 auto;width:270px;background:var(--cinza-fundo);border:1px solid var(--borda);border-radius:12px;padding:16px 18px;text-align:left}
+.depo-card-mini p{font-size:12.5px;color:var(--preto);line-height:1.55;margin-bottom:10px;font-style:italic}
+.depo-card-mini .depo-autor{font-size:11.5px;font-weight:700;color:var(--verde-hover);font-family:'Montserrat',sans-serif}
+.depo-card-mini .depo-estrelas{color:#F59E0B;font-size:12px;margin-bottom:6px}
+@media(max-width:640px){.depo-card-mini{width:78vw}}
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;z-index:200;background:var(--preto);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 -4px 20px rgba(0,0,0,0.25);transform:translateY(120%);transition:transform 0.3s ease}
+.sticky-bar.visivel{transform:translateY(0)}
+.sticky-bar-preco{color:var(--branco);font-family:'Montserrat',sans-serif;line-height:1.2}
+.sticky-bar-preco small{display:block;font-size:10px;color:rgba(255,255,255,0.55);text-decoration:line-through}
+.sticky-bar-preco strong{font-size:18px;color:var(--verde)}
+.sticky-bar .btn-cta{width:auto;padding:12px 20px;font-size:12.5px;max-width:none;flex-shrink:0}
 </style>
 </head>
 <body>
 
-<div class="urgencia">🔥 Promoção encerra hoje — <span class="data-destaque" id="data-hoje"></span> Garanta agora antes que o preço volte!</div>
-<script>const _d=new Date();const _m=["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];document.getElementById('data-hoje').textContent=_d.getDate()+'/'+_m[_d.getMonth()];</script>
+<div class="urgencia">🔥 Oferta expira em <span class="data-destaque" id="contador-urgencia">19:00</span> — garanta antes que o preço volte!</div>
 
 <section class="hero">
   <div class="container">
     <span class="nicho-badge">Para Empresas de Segurança Eletrônica</span>
-    <h1>Objetos Falantes Virais Para <span class="destaque">Empresas de Segurança Eletrônica Dominarem e Viralizarem</span> as Redes Sociais em 2026</h1>
-    <p class="subtitulo">Objetos falantes prontos para você postar hoje no Instagram, TikTok e WhatsApp. Sem criar nada do zero. Tudo pronto — só baixar e postar.</p>
+    <h1>EI, EMPRESA DE SEGURANÇA ELETRÔNICA: PARE DE PERDER <span class="destaque">CLIENTES E DINHEIRO</span> COM POSTS QUE NINGUÉM PARA PARA VER</h1>
+    <p class="subtitulo">Tenha vídeos prontos para a sua empresa de segurança eletrônica que prendem a atenção em qualquer rede social e transformam visualizações em contatos, agendamentos e faturamento — sem precisar aparecer, gravar ou editar.</p>
     <div class="hero-banner"><img src="banner_1.webp" alt="Kit de mídias para Empresas de Segurança Eletrônica" loading="lazy"></div>
+    <div class="depo-carrossel-wrap"><div class="depo-carrossel-track"><div class="depo-card-mini"><div class="depo-estrelas">★★★★★</div><p>"Antes, eu postava e quase ninguém interagia. Depois que comecei a usar os Objetos Falantes, passei a receber mais mensagens no WhatsApp e consegui fechar 9 novos atendimentos em 3 semanas. Os vídeos realmente chamam a atenção!"</p><div class="depo-autor">— Fabiana Rocha, Segurança Eletrônica em Belo Horizonte</div></div><div class="depo-card-mini"><div class="depo-estrelas">★★★★★</div><p>"Publiquei um dos vídeos no Instagram e, no mesmo dia, algumas pessoas entraram em contato perguntando sobre os meus serviços. Consegui transformar essas conversas em 6 novos agendamentos."</p><div class="depo-autor">— Marcos Tavares, especialista em Segurança Eletrônica</div></div><div class="depo-card-mini"><div class="depo-estrelas">★★★★★</div><p>"Eu perdia muito tempo tentando criar conteúdo e mesmo assim não tinha retorno. Com os Objetos Falantes, ficou muito mais fácil divulgar meu trabalho. Hoje recebo mais contatos pelas redes sociais e já aumentei meu faturamento em 33%."</p><div class="depo-autor">— Patrícia Gomes, Segurança Eletrônica em Fortaleza</div></div><div class="depo-card-mini"><div class="depo-estrelas">★★★★★</div><p>"Antes, eu postava e quase ninguém interagia. Depois que comecei a usar os Objetos Falantes, passei a receber mais mensagens no WhatsApp e consegui fechar 9 novos atendimentos em 3 semanas. Os vídeos realmente chamam a atenção!"</p><div class="depo-autor">— Fabiana Rocha, Segurança Eletrônica em Belo Horizonte</div></div><div class="depo-card-mini"><div class="depo-estrelas">★★★★★</div><p>"Publiquei um dos vídeos no Instagram e, no mesmo dia, algumas pessoas entraram em contato perguntando sobre os meus serviços. Consegui transformar essas conversas em 6 novos agendamentos."</p><div class="depo-autor">— Marcos Tavares, especialista em Segurança Eletrônica</div></div><div class="depo-card-mini"><div class="depo-estrelas">★★★★★</div><p>"Eu perdia muito tempo tentando criar conteúdo e mesmo assim não tinha retorno. Com os Objetos Falantes, ficou muito mais fácil divulgar meu trabalho. Hoje recebo mais contatos pelas redes sociais e já aumentei meu faturamento em 33%."</p><div class="depo-autor">— Patrícia Gomes, Segurança Eletrônica em Fortaleza</div></div></div></div>
+    <div class="text-center" style="margin-bottom:32px;">
+      <a href="#planos" class="btn-cta " style="max-width:420px;">QUERO ATRAIR MAIS CLIENTES</a>
+      <p style="font-size:12.5px;color:var(--cinza-texto);margin-top:10px;">Vídeos prontos • Acesso imediato • Pagamento único</p>
+    </div>
   </div>
 </section>
 
@@ -157,19 +186,12 @@ footer a{color:var(--verde);text-decoration:underline}
     <ul class="lista-itens">
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos de Objetos Falantes para Empresas de Segurança Eletrônica</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+6 Bônus totalmente grátis</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>📷 Câmera de segurança dizendo que está sempre de olho para proteger o patrimônio</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 DVR falando que é ele quem grava tudo o que acontece</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>💾 HD de armazenamento dizendo que sem ele as imagens não ficam salvas</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🚨 Alarme falando que dispara para avisar quando algo está errado</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔔 Sirene dizendo que faz barulho para espantar invasores e alertar todos ao redor</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🚪 Sensor magnético falando que percebe quando portas e janelas são abertas</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🕵️ Sensor de movimento dizendo que identifica presença e ajuda a evitar invasões</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>📱 Aplicativo de monitoramento falando que permite acompanhar tudo pelo celular</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔌 Fonte de alimentação dizendo que sem energia o sistema não trabalha direito</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🌐 Roteador falando que conexão estável é essencial para monitoramento remoto</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🧰 Ferramenta do instalador dizendo que instalação bem feita evita dor de cabeça depois</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🪜 Escada falando que está sempre presente nas instalações de câmeras e alarmes</li>
     </ul>
+    <div class="lista-cta-wrap"><a href="#planos" class="btn-cta ">QUERO VER O PACOTE COMPLETO</a></div>
   </div>
 </section>
 
@@ -185,19 +207,28 @@ footer a{color:var(--verde);text-decoration:underline}
   </div>
 </section>
 
+<section class="secao bg-branco">
+  <div class="container" style="max-width:720px;">
+    <h2 class="secao-titulo">SEU TRABALHO PODE SER EXCELENTE.<br>MAS, SE NINGUÉM PARA PARA VER,<br><span class="destaque">NINGUÉM DESCOBRE.</span></h2>
+    <p style="text-align:center;color:var(--cinza-texto);font-size:15px;line-height:1.8;max-width:620px;margin:24px auto 0;">Todos os dias, potenciais clientes passam pelas redes sociais procurando soluções para câmeras desatualizadas, alarmes falhos, portões sem controle de acesso e riscos de invasão.</p>
+    <p style="text-align:center;color:var(--cinza-texto);font-size:15px;line-height:1.8;max-width:620px;margin:16px auto 0;">O problema é que posts comuns são ignorados em segundos.</p>
+    <p style="text-align:center;color:var(--cinza-texto);font-size:15px;line-height:1.8;max-width:620px;margin:16px auto 0;">Os Objetos Falantes interrompem esse padrão, despertam curiosidade e fazem sua empresa de segurança eletrônica se destacar em meio a tantos conteúdos iguais.</p>
+    <p style="text-align:center;color:var(--preto);font-size:16px;font-weight:700;line-height:1.8;max-width:620px;margin:28px auto 0;">Você não precisa trabalhar mais para conseguir clientes.<br>Você precisa fazer mais pessoas perceberem o valor do seu trabalho.</p>
+  </div>
+</section>
+
 <section class="secao bg-cinza">
   <div class="container">
-    <h2 class="secao-titulo">Por Que o Método <span class="destaque">M.A.P.A.</span> Funciona?</h2>
-    <p class="secao-sub">Você não precisa investir caro para começar a ver resultado</p>
-    <div style="background:var(--verde-claro);border:1px solid var(--verde-medio);border-radius:10px;padding:20px 24px;text-align:center;"><p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,2vw,17px);color:var(--verde);">M.A.P.A. = Micro investimento + Ação + Prova + Acesso imediato</p></div>
+    <h2 class="secao-titulo">POR QUE O MÉTODO <span class="destaque">A.R.V.</span> PODE GERAR MAIS CLIENTES?</h2>
+    <p class="secao-sub">Não basta publicar. Seu conteúdo precisa fazer a pessoa parar, assistir e tomar uma atitude.</p>
+    <div style="background:var(--verde-claro);border:1px solid var(--verde-medio);border-radius:10px;padding:20px 24px;text-align:center;"><p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,2vw,15px);color:var(--verde);">Atenção, Retenção e Vendas — o Método A.R.V.</p></div>
     <div class="mapa-grid">
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon1.webp" alt="M" loading="lazy"></div><div class="letra">M</div><h3>Micro investimento</h3><p>Mais barato que um lanche — a partir de R$37,90</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon2.webp" alt="A" loading="lazy"></div><div class="letra">A</div><h3>Ação imediata</h3><p>Comprou, já posta hoje mesmo</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon3.webp" alt="P" loading="lazy"></div><div class="letra">P</div><h3>Prova rápida</h3><p>Postou hoje, já sente a diferença</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon4.webp" alt="A" loading="lazy"></div><div class="letra">A</div><h3>Acesso imediato</h3><p>Sem espera, sem burocracia</p></div>
+      <div class="mapa-card"><div class="mapa-icon"><img src="arv_1.webp" alt="Atenção" loading="lazy"></div><div class="letra">A</div><h3>Atenção</h3><p>Os personagens interrompem o scroll e fazem seu conteúdo ser percebido nos primeiros segundos.</p></div>
+      <div class="mapa-card"><div class="mapa-icon"><img src="icon2.webp" alt="Retenção" loading="lazy"></div><div class="letra">R</div><h3>Retenção</h3><p>A curiosidade de ver um objeto falando mantém o potencial cliente assistindo por mais tempo.</p></div>
+      <div class="mapa-card"><div class="mapa-icon"><img src="icon3.webp" alt="Vendas" loading="lazy"></div><div class="letra">V</div><h3>Vendas</h3><p>As mensagens apresentam situações de segurança eletrônica e incentivam o público a entrar em contato para saber mais.</p></div>
     </div>
     <div class="text-center mt-32">
-      <p style="color:var(--cinza-texto);font-size:15px;max-width:480px;margin:0 auto 24px;">👉 <strong style="color:var(--preto);">Você paga pouco, testa rápido e já começa a ver resultado.</strong> Com entrega imediata no seu email e WhatsApp.</p>
+      <p style="color:var(--preto);font-size:15px;font-weight:700;max-width:480px;margin:0 auto 24px;">Sem atenção, não existe contato.<br>Sem contato, dificilmente existe venda.</p>
       <a href="#planos" class="btn-cta">VER OFERTA COMPLETA</a>
     </div>
   </div>
@@ -245,17 +276,24 @@ footer a{color:var(--verde);text-decoration:underline}
 
 <section class="secao bg-cinza">
   <div class="container">
-    <h2 class="secao-titulo">Veja o Que Estão <span class="destaque">Falando</span></h2>
-    <p class="secao-sub">🔥 Donos de negócios que já usaram o pacote</p>
-    <div class="depo-grid">
-      <img src="depo_1.webp" alt="Depoimento 1" loading="lazy"><img src="depo_2.webp" alt="Depoimento 2" loading="lazy">
-      <img src="depo_3.webp" alt="Depoimento 3" loading="lazy"><img src="depo_4.webp" alt="Depoimento 4" loading="lazy">
-    </div>
+    <h2 class="secao-titulo">VEJA OS RESULTADOS DE QUEM <span class="destaque">COMEÇOU A USAR</span> OBJETOS FALANTES</h2>
+    <p class="secao-sub">Profissionais de diferentes segmentos já estão usando nossos pacotes para chamar atenção nas redes sociais, gerar conversas no WhatsApp e conquistar novos clientes.</p>
     <section class="phone-video-section"><div class="phone-video-grid">
     <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-1.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
     <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-2.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
     <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-3.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
     </div></section>
+  </div>
+</section>
+
+<section class="secao bg-cinza">
+  <div class="container" style="max-width:680px;">
+    <h2 class="secao-titulo">QUANTO ESTÁ CUSTANDO CONTINUAR<br><span class="destaque">SENDO IGNORADO</span> NAS REDES SOCIAIS?</h2>
+    <p style="text-align:center;color:var(--cinza-texto);font-size:15px;line-height:1.8;max-width:560px;margin:24px auto 0;">Você não precisa de milhares de seguidores.</p>
+    <p style="text-align:center;color:var(--cinza-texto);font-size:15px;line-height:1.8;max-width:560px;margin:12px auto 0;">Precisa que as pessoas certas parem, conheçam seu trabalho e entrem em contato para marcar um atendimento.</p>
+    <p style="text-align:center;color:var(--preto);font-size:16px;font-weight:700;line-height:1.8;max-width:560px;margin:24px auto 0;">Por apenas R$37,90, você recebe dezenas de vídeos prontos para divulgar sua empresa de segurança eletrônica.</p>
+    <p style="text-align:center;color:var(--cinza-texto);font-size:15px;line-height:1.8;max-width:560px;margin:16px auto 0;">Um único novo atendimento pode pagar todo o investimento no pacote.</p>
+    <p style="text-align:center;color:var(--cinza-texto);font-size:15px;line-height:1.8;max-width:560px;margin:12px auto 0;">E todos os próximos contatos poderão representar lucro para o seu negócio.</p>
   </div>
 </section>
 
@@ -280,6 +318,7 @@ footer a{color:var(--verde);text-decoration:underline}
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Sistema de Controle de Clientes</li>
         </ul>
         <a href="https://app.mivvo.com.br/checkout/d7888059-f111-4387-86c3-d02433f8aa94" class="btn-cta" style="max-width:100%;">SIM! QUERO MEU PACOTE AGORA!</a>
+        <div class="selo-seguranca"><span>✅ Compra 100% segura</span><span>⚡ Receba em menos de 2 minutos</span><span>✅ Pix seguro</span></div>
         <p class="plano-rodape">Você não vai encontrar esse preço depois</p>
       </div>
     </div>
@@ -290,7 +329,7 @@ footer a{color:var(--verde);text-decoration:underline}
   <div class="container">
     <h2 class="secao-titulo" style="margin-bottom:32px;">Como Você <span class="destaque">Recebe</span>?</h2>
     <div class="entrega-box">
-      <div class="entrega-icones"><div class="entrega-icone">📧</div><div class="entrega-icone">💬</div></div>
+      <div class="entrega-icones"><div class="entrega-icone">📧</div><div class="entrega-icone"><img src="whatsapp_icon.png" alt="WhatsApp" style="width:38px;height:38px;object-fit:contain;"></div></div>
       <div><h3>Email + WhatsApp</h3><p>Assim que o pagamento for confirmado, enviamos tudo direto para o seu email e WhatsApp. Acesso imediato, sem espera.</p></div>
     </div>
   </div>
@@ -303,7 +342,7 @@ footer a{color:var(--verde);text-decoration:underline}
       <h3>Risco Zero — Garantia de 7 Dias</h3>
       <p>Confiamos tanto no pacote que você tem 7 dias de garantia incondicional. Não gostou? Basta enviar um email e devolvemos 100% do seu dinheiro. Sem perguntas.</p>
     </div>
-    <div class="text-center mt-32"><a href="https://app.mivvo.com.br/checkout/d7888059-f111-4387-86c3-d02433f8aa94" class="btn-cta">EU PRECISO COMPRAR AGORA MESMO!</a></div>
+    <div class="text-center mt-32"><p class="cta-preco-mini">R$67,90 por <strong>R$37,90</strong> — compra segura, Pix na hora</p><a href="https://app.mivvo.com.br/checkout/d7888059-f111-4387-86c3-d02433f8aa94" class="btn-cta ">SIM! QUERO ATRAIR MAIS CLIENTES</a></div>
   </div>
 </section>
 
@@ -314,12 +353,12 @@ footer a{color:var(--verde);text-decoration:underline}
     <div class="faq-lista">
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Preciso saber editar vídeo para usar?<span class="faq-icone">+</span></button><div class="faq-resposta">Não! Os vídeos já chegam prontos. Basta baixar e postar direto no Instagram, TikTok ou WhatsApp. Zero edição necessária.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Funciona para quem nunca usou redes sociais?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! O pacote foi criado justamente para quem não tem experiência em marketing digital. Todo o conteúdo é simples — você baixa e posta.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Quanto tempo leva para receber?<span class="faq-icone">+</span></button><div class="faq-resposta">O acesso é imediato! Assim que o pagamento for confirmado, enviamos tudo direto para o seu email e WhatsApp. Em menos de 5 minutos você já pode começar a postar.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Os vídeos funcionam para qualquer cidade?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Os objetos falantes não citam localização, então funcionam para qualquer cidade do Brasil. O algoritmo das redes entrega para pessoas da sua região automaticamente.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Quanto tempo leva para receber?<span class="faq-icone">+</span></button><div class="faq-resposta">O acesso é imediato! Assim que o pagamento for confirmado, enviamos tudo direto para o seu email. Em menos de 5 minutos você já pode começar a postar.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Os vídeos funcionam para qualquer cidade?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim. Os vídeos não mencionam uma localização específica e podem ser utilizados por empresas de segurança eletrônica de qualquer cidade do Brasil. Para alcançar pessoas próximas, você pode publicar marcando sua localização, usar Stories, divulgar no WhatsApp ou combinar os vídeos com anúncios direcionados para sua região.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">E se eu não gostar? Tem garantia?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolvemos 100% do seu dinheiro. Sem burocracia.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Preciso ter equipamento profissional para gravar algo parecido?<span class="faq-icone">+</span></button><div class="faq-resposta">Não! Os vídeos já vêm prontos e editados. Você não precisa gravar, filmar ou editar nada — é só baixar o vídeo pronto e publicar nas suas redes.</div></div>
     </div>
-    <div class="text-center mt-32"><a href="https://app.mivvo.com.br/checkout/d7888059-f111-4387-86c3-d02433f8aa94" class="btn-cta">👉 QUERO GARANTIR MEU PACOTE AGORA</a></div>
+    <div class="text-center mt-32"><p class="cta-preco-mini">R$67,90 por <strong>R$37,90</strong> — compra segura, Pix na hora</p><a href="https://app.mivvo.com.br/checkout/d7888059-f111-4387-86c3-d02433f8aa94" class="btn-cta ">👉 QUERO GARANTIR MEU PACOTE AGORA</a></div>
   </div>
 </section>
 
@@ -336,5 +375,37 @@ window.onload=()=>{document.querySelectorAll("a").forEach(link=>{if(link.href&&l
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','955425760527025');fbq('track','PageView');</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=955425760527025&ev=PageView&noscript=1"/></noscript>
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+<div class="sticky-bar" id="sticky-bar">
+  <div class="sticky-bar-preco"><small>R$67,90</small><strong>R$37,90</strong></div>
+  <a href="https://app.mivvo.com.br/checkout/d7888059-f111-4387-86c3-d02433f8aa94" class="btn-cta">Garantir Pacote</a>
+</div>
+
+<script>
+(function(){
+  var el=document.getElementById('contador-urgencia');
+  if(el){
+    var end=Date.now()+19*60*1000;
+    function tick(){
+      var rest=Math.max(0,Math.floor((end-Date.now())/1000));
+      var m=String(Math.floor(rest/60)).padStart(2,'0');
+      var s=String(rest%60).padStart(2,'0');
+      el.textContent=m+':'+s;
+      if(rest>0) setTimeout(tick,1000);
+    }
+    tick();
+  }
+})();
+(function(){
+  var bar=document.getElementById('sticky-bar');
+  var hero=document.querySelector('.hero');
+  if(bar&&hero){
+    window.addEventListener('scroll',function(){
+      var show = window.scrollY > (hero.offsetTop + hero.offsetHeight);
+      bar.classList.toggle('visivel', show);
+    }, {passive:true});
+  }
+})();
+</script>
 </body>
 </html>
