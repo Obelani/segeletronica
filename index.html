@@ -139,6 +139,27 @@ footer a{color:var(--verde);text-decoration:underline}
 .exit-btn{display:inline-block;background:var(--verde);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;padding:16px 28px;border-radius:8px;width:100%;max-width:100%;text-align:center;transition:background 0.15s}
 .exit-btn:hover{background:var(--verde-hover)}
 .exit-recusar{display:block;margin:14px auto 0;font-size:12px;color:var(--cinza-texto);text-decoration:underline;cursor:pointer;background:none;border:none}
+
+.objecoes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+@media(max-width:768px){.objecoes-grid{grid-template-columns:1fr}}
+.objecao-card{background:var(--branco);border-radius:14px;padding:32px 24px;text-align:center;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.objecao-icon{width:52px;height:52px;margin:0 auto 18px;color:var(--verde);display:flex;align-items:center;justify-content:center}
+.objecao-icon svg{width:100%;height:100%}
+.objecao-card h3{font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;color:var(--preto);margin-bottom:8px}
+.objecao-card p{font-size:13.5px;color:var(--cinza-texto);line-height:1.5}
+.bonus-badge{display:inline-block;background:var(--verde);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:800;font-size:10.5px;letter-spacing:0.5px;padding:2px 9px;border-radius:999px;margin-bottom:4px}
+.bonus-item-titulo-novo{display:flex;flex-direction:column;gap:2px;flex:1;text-align:left}
+.destaque-mais{display:block;text-align:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:20px;color:var(--verde);margin-top:18px;padding:14px;background:var(--verde-claro);border-radius:10px}
+.bonus-lista{display:flex;flex-direction:column;gap:14px;max-width:720px;margin:0 auto}
+.bonus-item-novo{background:var(--branco);border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.08);overflow:hidden}
+.bonus-item-cabecalho{display:flex;align-items:center;gap:16px;padding:16px 20px;cursor:pointer}
+.bonus-item-cabecalho img{width:72px;height:48px;object-fit:cover;border-radius:8px;flex-shrink:0}
+.bonus-item-seta{flex-shrink:0;font-size:20px;color:var(--verde);transition:transform 0.25s}
+.bonus-item-novo.aberto .bonus-item-seta{transform:rotate(180deg)}
+.bonus-item-corpo{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.bonus-item-corpo p{padding:0 20px 18px 108px;font-size:13.5px;color:var(--cinza-texto);line-height:1.6}
+@media(max-width:540px){.bonus-item-corpo p{padding:0 20px 18px 20px}}
+.bonus-lista-cta{text-align:center;margin-top:32px}
 </style>
 </head>
 <body>
@@ -149,8 +170,8 @@ footer a{color:var(--verde);text-decoration:underline}
 <section class="hero">
   <div class="container">
     <span class="nicho-badge">Para Empresas de Segurança Eletrônica</span>
-    <h1>Objetos Falantes Virais Para <span class="destaque">Empresas de Segurança Eletrônica Dominarem e Viralizarem</span> as Redes Sociais em 2026</h1>
-    <p class="subtitulo">Objetos falantes prontos para você postar hoje no Instagram, TikTok e WhatsApp. Sem criar nada do zero. Tudo pronto — só baixar e postar.</p>
+    <h1>EI, EMPRESA DE SEGURAN\u00c7A ELETR\u00d4NICA: PARE DE PERDER <span class="destaque">CLIENTES E DINHEIRO</span> COM POSTS QUE NINGUÉM PARA PARA VER</h1>
+    <p class="subtitulo">Tenha vídeos prontos para a sua empresa de seguran\u00e7a eletr\u00f4nica que prendem a atenção em qualquer rede social e transformam visualizações em contatos, agendamentos e faturamento — sem precisar aparecer, gravar ou editar.</p>
     <div class="hero-banner"><img src="banner_1.webp" alt="Kit de mídias para Empresas de Segurança Eletrônica" loading="lazy"></div>
   </div>
 </section>
@@ -159,9 +180,21 @@ footer a{color:var(--verde);text-decoration:underline}
   <div class="contador-grid">
     <div class="contador-item"><div class="contador-numero">+50</div><div class="contador-descricao">Vídeos prontos no pacote</div></div>
     <div class="contador-item"><div class="contador-numero">10x</div><div class="contador-descricao">Mais vendas nas redes sociais</div></div>
-    <div class="contador-item"><div class="contador-numero">+6</div><div class="contador-descricao">Bônus exclusivos grátis</div></div>
+    <div class="contador-item"><div class="contador-numero">+7</div><div class="contador-descricao">Bônus exclusivos grátis</div></div>
   </div>
 </div>
+
+<section class="secao bg-branco">
+  <div class="container">
+    <h2 class="secao-titulo">"Será Que <span class="destaque">Funciona Pra Mim</span>?"</h2>
+    <p class="secao-sub">As dúvidas mais comuns antes de começar</p>
+    <div class="objecoes-grid">
+      <div class="objecao-card"><div class="objecao-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div><h3>Não sei gravar vídeo</h3><p>Os mascotes falam por você, em cenários prontos.</p></div>
+      <div class="objecao-card"><div class="objecao-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Não tenho tempo</h3><p>Um mês de conteúdo resolvido em minutos.</p></div>
+      <div class="objecao-card"><div class="objecao-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41 13.42 20.6a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82Z"/><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg></div><h3>Deve ser caro</h3><p>Menos de R$ 0,50 por vídeo. Sério.</p></div>
+    </div>
+  </div>
+</section>
 
 <section class="secao bg-cinza">
   <div class="container">
@@ -169,20 +202,12 @@ footer a{color:var(--verde);text-decoration:underline}
     <p class="secao-sub">Tudo criado para atrair clientes e mostrar a qualidade do seu trabalho de segurança eletrônica todos os dias</p>
     <ul class="lista-itens">
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos de Objetos Falantes para Empresas de Segurança Eletrônica</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+6 Bônus totalmente grátis</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>📷 Câmera de segurança dizendo que está sempre de olho para proteger o patrimônio</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 DVR falando que é ele quem grava tudo o que acontece</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>💾 HD de armazenamento dizendo que sem ele as imagens não ficam salvas</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🚨 Alarme falando que dispara para avisar quando algo está errado</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔔 Sirene dizendo que faz barulho para espantar invasores e alertar todos ao redor</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🚪 Sensor magnético falando que percebe quando portas e janelas são abertas</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🕵️ Sensor de movimento dizendo que identifica presença e ajuda a evitar invasões</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>📱 Aplicativo de monitoramento falando que permite acompanhar tudo pelo celular</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔌 Fonte de alimentação dizendo que sem energia o sistema não trabalha direito</li>
+      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+7 Bônus totalmente grátis</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🌐 Roteador falando que conexão estável é essencial para monitoramento remoto</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🧰 Ferramenta do instalador dizendo que instalação bem feita evita dor de cabeça depois</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🪜 Escada falando que está sempre presente nas instalações de câmeras e alarmes</li>
     </ul>
+    <div class="destaque-mais">+ MUITO MAIS 👇</div>
   </div>
 </section>
 
@@ -200,17 +225,16 @@ footer a{color:var(--verde);text-decoration:underline}
 
 <section class="secao bg-cinza">
   <div class="container">
-    <h2 class="secao-titulo">Por Que o Método <span class="destaque">M.A.P.A.</span> Funciona?</h2>
-    <p class="secao-sub">Você não precisa investir caro para começar a ver resultado</p>
-    <div style="background:var(--verde-claro);border:1px solid var(--verde-medio);border-radius:10px;padding:20px 24px;text-align:center;"><p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,2vw,17px);color:var(--verde);">M.A.P.A. = Micro investimento + Ação + Prova + Acesso imediato</p></div>
+    <h2 class="secao-titulo">POR QUE O MÉTODO <span class="destaque">A.R.V.</span> PODE GERAR MAIS CLIENTES?</h2>
+    <p class="secao-sub">Não basta publicar. Seu conteúdo precisa fazer a pessoa parar, assistir e tomar uma atitude.</p>
+    <div style="background:var(--verde-claro);border:1px solid var(--verde-claro);border-radius:10px;padding:20px 24px;text-align:center;"><p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,2vw,15px);color:var(--verde);">Atenção, Retenção e Vendas — o Método A.R.V.</p></div>
     <div class="mapa-grid">
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon1.webp" alt="M" loading="lazy"></div><div class="letra">M</div><h3>Micro investimento</h3><p>Mais barato que um lanche — a partir de R$37,90</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon2.webp" alt="A" loading="lazy"></div><div class="letra">A</div><h3>Ação imediata</h3><p>Comprou, já posta hoje mesmo</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon3.webp" alt="P" loading="lazy"></div><div class="letra">P</div><h3>Prova rápida</h3><p>Postou hoje, já sente a diferença</p></div>
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon4.webp" alt="A" loading="lazy"></div><div class="letra">A</div><h3>Acesso imediato</h3><p>Sem espera, sem burocracia</p></div>
+      <div class="mapa-card"><div class="mapa-icon"><img src="arv_1.webp" alt="Atenção" loading="lazy"></div><div class="letra">A</div><h3>Atenção</h3><p>Os personagens interrompem o scroll e fazem seu conteúdo ser percebido nos primeiros segundos.</p></div>
+      <div class="mapa-card"><div class="mapa-icon"><img src="icon2.webp" alt="Retenção" loading="lazy"></div><div class="letra">R</div><h3>Retenção</h3><p>A curiosidade de ver um objeto falando mantém o potencial cliente assistindo por mais tempo.</p></div>
+      <div class="mapa-card"><div class="mapa-icon"><img src="icon3.webp" alt="Vendas" loading="lazy"></div><div class="letra">V</div><h3>Vendas</h3><p>As mensagens apresentam situa\u00e7\u00f5es de seguran\u00e7a eletr\u00f4nica e incentivam o público a entrar em contato para saber mais.</p></div>
     </div>
     <div class="text-center mt-32">
-      <p style="color:var(--cinza-texto);font-size:15px;max-width:480px;margin:0 auto 24px;">👉 <strong style="color:var(--preto);">Você paga pouco, testa rápido e já começa a ver resultado.</strong> Com entrega imediata no seu email e WhatsApp.</p>
+      <p style="color:var(--preto);font-size:15px;font-weight:700;max-width:480px;margin:0 auto 24px;">Sem atenção, não existe contato.<br>Sem contato, dificilmente existe venda.</p>
       <a href="#planos" class="btn-cta">VER OFERTA COMPLETA</a>
     </div>
   </div>
@@ -247,12 +271,67 @@ footer a{color:var(--verde);text-decoration:underline}
 
 <section class="secao bg-branco">
   <div class="container">
-    <h2 class="secao-titulo">🎁 6 Bônus <span class="destaque">Exclusivos</span> Para Quem Comprar Hoje</h2>
-    <p class="secao-sub">Ferramentas que normalmente custariam R$366 — hoje você recebe de graça</p>
-    <div class="bonus-grid">
-      <img src="bonus_1.webp" alt="Bônus 1" loading="lazy"><img src="bonus_2.webp" alt="Bônus 2" loading="lazy"><img src="bonus_3.webp" alt="Bônus 3" loading="lazy">
-      <img src="bonus_4.webp" alt="Bônus 4" loading="lazy"><img src="bonus_5.webp" alt="Bônus 5" loading="lazy"><img src="bonus_6.webp" alt="Bônus 6" loading="lazy">
+    <h2 class="secao-titulo">Além dos vídeos, você recebe <span class="destaque">7 bônus</span> para divulgar, atender e organizar seu negócio</h2>
+    <p class="secao-sub">Toque em cada bônus para conhecer o material.</p>
+    <div class="bonus-lista">
+      <div class="bonus-item-novo">
+        <div class="bonus-item-cabecalho" onclick="toggleBonusNovo(this)">
+          <img src="bonus_novo_1.webp" alt="1. Calculadora de Preços e Lucro" loading="lazy">
+          <div class="bonus-item-titulo-novo"><span class="bonus-badge">BÔNUS 1</span>Calculadora de Preços e Lucro</div>
+          <div class="bonus-item-seta">▾</div>
+        </div>
+        <div class="bonus-item-corpo"><p>Uma planilha simples para informar materiais, despesas, tempo de trabalho e valor da hora. Ela mostra o custo total, um preço sugerido conforme a margem escolhida e o lucro estimado no valor que você pretende cobrar.</p></div>
+      </div>
+      <div class="bonus-item-novo">
+        <div class="bonus-item-cabecalho" onclick="toggleBonusNovo(this)">
+          <img src="bonus_novo_2.webp" alt="2. Controle de Clientes e Retornos" loading="lazy">
+          <div class="bonus-item-titulo-novo"><span class="bonus-badge">BÔNUS 2</span>Controle de Clientes e Retornos</div>
+          <div class="bonus-item-seta">▾</div>
+        </div>
+        <div class="bonus-item-corpo"><p>Registre quem entrou em contato, o serviço de interesse e a situação de cada conversa. A planilha ajuda você a acompanhar propostas enviadas e destaca os clientes que precisam de retorno.</p></div>
+      </div>
+      <div class="bonus-item-novo">
+        <div class="bonus-item-cabecalho" onclick="toggleBonusNovo(this)">
+          <img src="bonus_novo_3.webp" alt="3. Gerador de Orçamentos" loading="lazy">
+          <div class="bonus-item-titulo-novo"><span class="bonus-badge">BÔNUS 3</span>Gerador de Orçamentos</div>
+          <div class="bonus-item-seta">▾</div>
+        </div>
+        <div class="bonus-item-corpo"><p>Receba um guia em PDF com um passo a passo para criar e enviar orçamentos. O guia dá acesso a um gerador online gratuito e externo; o PDF gerado pela ferramenta pode conter marca d’água.</p></div>
+      </div>
+      <div class="bonus-item-novo">
+        <div class="bonus-item-cabecalho" onclick="toggleBonusNovo(this)">
+          <img src="bonus_novo_4.webp" alt="4. Método Post que Atrai Clientes" loading="lazy">
+          <div class="bonus-item-titulo-novo"><span class="bonus-badge">BÔNUS 4</span>Método Post que Atrai Clientes</div>
+          <div class="bonus-item-seta">▾</div>
+        </div>
+        <div class="bonus-item-corpo"><p>Orientações para publicar os conteúdos com mais intenção: apresentar seu serviço, chamar a atenção do público certo e convidar a pessoa a entrar em contato.</p></div>
+      </div>
+      <div class="bonus-item-novo">
+        <div class="bonus-item-cabecalho" onclick="toggleBonusNovo(this)">
+          <img src="bonus_novo_5.webp" alt="5. Fórmula Instagram que Vende" loading="lazy">
+          <div class="bonus-item-titulo-novo"><span class="bonus-badge">BÔNUS 5</span>Fórmula Instagram que Vende</div>
+          <div class="bonus-item-seta">▾</div>
+        </div>
+        <div class="bonus-item-corpo"><p>Um material para organizar a apresentação do seu perfil e pensar em publicações que ajudem o visitante a entender o que você oferece.</p></div>
+      </div>
+      <div class="bonus-item-novo">
+        <div class="bonus-item-cabecalho" onclick="toggleBonusNovo(this)">
+          <img src="bonus_novo_6.webp" alt="6. Protocolo de Atendimento" loading="lazy">
+          <div class="bonus-item-titulo-novo"><span class="bonus-badge">BÔNUS 6</span>Protocolo de Atendimento</div>
+          <div class="bonus-item-seta">▾</div>
+        </div>
+        <div class="bonus-item-corpo"><p>Um roteiro simples para conduzir a conversa desde a primeira mensagem: entender o que o cliente procura, apresentar a solução e combinar o próximo passo.</p></div>
+      </div>
+      <div class="bonus-item-novo">
+        <div class="bonus-item-cabecalho" onclick="toggleBonusNovo(this)">
+          <img src="bonus_novo_7.webp" alt="7. Biblioteca de Respostas para WhatsApp" loading="lazy">
+          <div class="bonus-item-titulo-novo"><span class="bonus-badge">BÔNUS 7</span>Biblioteca de Respostas para WhatsApp</div>
+          <div class="bonus-item-seta">▾</div>
+        </div>
+        <div class="bonus-item-corpo"><p>Modelos de mensagens para responder dúvidas, pedidos de preço e contatos que ficaram sem resposta. Você pode adaptar os textos ao seu jeito de atender.</p></div>
+      </div>
     </div>
+    <div class="bonus-lista-cta"><a href="#planos" class="btn-cta">QUERO OS VÍDEOS E OS 7 BÔNUS</a></div>
   </div>
 </section>
 
@@ -260,10 +339,6 @@ footer a{color:var(--verde);text-decoration:underline}
   <div class="container">
     <h2 class="secao-titulo">Veja o Que Estão <span class="destaque">Falando</span></h2>
     <p class="secao-sub">🔥 Donos de negócios que já usaram o pacote</p>
-    <div class="depo-grid">
-      <img src="depo_1.webp" alt="Depoimento 1" loading="lazy"><img src="depo_2.webp" alt="Depoimento 2" loading="lazy">
-      <img src="depo_3.webp" alt="Depoimento 3" loading="lazy"><img src="depo_4.webp" alt="Depoimento 4" loading="lazy">
-    </div>
     <section class="phone-video-section"><div class="phone-video-grid">
     <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-1.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
     <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><video src="depoimento-2.mp4" width="100%" height="100%" style="aspect-ratio:9/16;object-fit:cover;" playsinline preload="metadata" controls controlsList="nodownload nofullscreen noplaybackrate noremoteplayback" disablePictureInPicture oncontextmenu="return false;"></video></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
@@ -281,17 +356,24 @@ footer a{color:var(--verde);text-decoration:underline}
     <div class="plano-unico-wrap">
       <div class="plano">
         <span class="plano-badge">⭐ OFERTA ÚNICA</span>
-        <div class="plano-header"><h3>Pacote Completo</h3><div class="plano-preco-box"><p class="plano-de">Pagamento único • Sem mensalidade</p><p class="plano-valor">R$37,90</p><p class="plano-tipo">Acesso imediato após a confirmação</p></div></div>
+        <div class="plano-header"><h3>Pacote Completo</h3></div>
         <ul>
           <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos de Objetos Falantes para Empresas de Segurança Eletrônica</li>
           <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Destaques para Bio no Instagram</li>
-          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 1: Painel de Gestão Inteligente</li>
-          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 2: Método Posts que Atrai Clientes</li>
+                    <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 1: Calculadora de Preços e Lucro</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 2: Controle de Clientes e Retornos</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 3: Gerador de Orçamentos</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 4: Método Post que Atrai Clientes</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 5: Fórmula Instagram que Vende</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Protocolo de Atendimento</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 7: Biblioteca de Respostas para WhatsApp</li>
+        <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 2: Método Posts que Atrai Clientes</li>
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 3: Fórmula Instagram que Vende</li>
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 4: Protocolo de Atendimento</li>
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 5: Biblioteca de Respostas WhatsApp</li>
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Sistema de Controle de Clientes</li>
         </ul>
+                <div class="plano-preco-box"><p class="plano-de">Pagamento único • Sem mensalidade</p><p class="plano-valor">R$37,90</p><p class="plano-tipo">Acesso imediato após a confirmação</p></div>
         <a href="https://app.mivvo.com.br/checkout/d7888059-f111-4387-86c3-d02433f8aa94" class="btn-cta" style="max-width:100%;">SIM! QUERO MEU PACOTE AGORA!</a>
         <p class="plano-rodape">Você não vai encontrar esse preço depois</p>
       </div>
@@ -378,6 +460,21 @@ window.onload=()=>{document.querySelectorAll("a").forEach(link=>{if(link.href&&l
   setTimeout(abrir, 45000);
 })();
 function fecharExitPopup(){var ov=document.getElementById('exit-overlay');if(ov)ov.classList.remove('ativo');}
+</script>
+<script>
+function toggleBonusNovo(el){
+  var item = el.closest('.bonus-item-novo');
+  var corpo = item.querySelector('.bonus-item-corpo');
+  var aberto = item.classList.contains('aberto');
+  document.querySelectorAll('.bonus-item-novo').forEach(function(i){
+    i.classList.remove('aberto');
+    i.querySelector('.bonus-item-corpo').style.maxHeight = null;
+  });
+  if(!aberto){
+    item.classList.add('aberto');
+    corpo.style.maxHeight = corpo.scrollHeight + 'px';
+  }
+}
 </script>
 </body>
 </html>
