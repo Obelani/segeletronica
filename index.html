@@ -90,6 +90,14 @@ a{text-decoration:none;color:inherit}
 .alerta-promo{background:var(--verde-claro);border:2px solid var(--verde);border-radius:10px;padding:16px 24px;text-align:center;margin-bottom:36px}
 .alerta-promo p{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(13px,2vw,15px);color:var(--verde)}
 .plano-unico-wrap{display:flex;justify-content:center}
+.planos-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.planos-grid .plano{max-width:none;width:auto}
+.plano.destaque{border:3px solid var(--verde);background:linear-gradient(180deg,var(--verde-claro) 0%,#ffffff 26%);box-shadow:0 14px 40px rgba(0,0,0,0.18);animation:xp-glow 2.4s ease-in-out infinite;transform:scale(1.02)}
+.plano.destaque .plano-badge{font-size:13px;padding:7px 22px}
+@keyframes xp-glow{0%,100%{box-shadow:0 14px 40px rgba(0,0,0,0.14)}50%{box-shadow:0 14px 48px rgba(0,0,0,0.3)}}
+.selo-seguranca{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.selo-seguranca span{display:inline-flex;align-items:center;gap:4px;background:var(--verde-claro);padding:5px 12px;border-radius:999px;font-weight:700;color:var(--verde);font-size:11.5px}
+@media(max-width:620px){.planos-grid{grid-template-columns:1fr}.plano.destaque{transform:none}}
 .plano{background:var(--branco);border:2px solid var(--verde);border-radius:14px;padding:36px 28px;display:flex;flex-direction:column;gap:20px;position:relative;text-align:center;box-shadow:0 6px 28px rgba(5,150,105,0.16);max-width:440px;width:100%}
 .plano-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--verde);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:4px 18px;border-radius:999px;white-space:nowrap}
 .plano-header h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--cinza-texto);margin-bottom:16px}
@@ -141,11 +149,11 @@ footer a{color:var(--verde);text-decoration:underline}
 .bonus-lista{display:flex;flex-direction:column;gap:14px;max-width:720px;margin:0 auto}
 .bonus-item-novo{background:var(--branco);border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.08);overflow:hidden}
 .bonus-item-cabecalho{display:flex;align-items:center;gap:16px;padding:16px 20px;cursor:pointer}
-.bonus-item-cabecalho img{width:72px;height:48px;object-fit:cover;border-radius:8px;flex-shrink:0}
+.bonus-item-cabecalho img{width:97px;height:65px;object-fit:cover;border-radius:8px;flex-shrink:0}
 .bonus-item-seta{flex-shrink:0;font-size:20px;color:var(--verde);transition:transform 0.25s}
 .bonus-item-novo.aberto .bonus-item-seta{transform:rotate(180deg)}
 .bonus-item-corpo{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
-.bonus-item-corpo p{padding:0 20px 18px 108px;font-size:13.5px;color:var(--cinza-texto);line-height:1.6}
+.bonus-item-corpo p{padding:0 20px 18px 133px;font-size:13.5px;color:var(--cinza-texto);line-height:1.6}
 @media(max-width:540px){.bonus-item-corpo p{padding:0 20px 18px 20px}}
 .bonus-lista-cta{text-align:center;margin-top:32px}
 </style>
@@ -341,11 +349,23 @@ footer a{color:var(--verde);text-decoration:underline}
     <script>const _dp=new Date();const _mp=["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];const _di=["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];document.getElementById('data-promo').textContent=_dp.getDate()+' de '+_mp[_dp.getMonth()]+', '+_di[_dp.getDay()];</script>
     <h2 class="secao-titulo">Garanta Seu <span class="destaque">Pacote Completo</span></h2>
     <p class="secao-sub">Tudo o que você precisa para bombar suas redes hoje mesmo</p>
-    <div class="plano-unico-wrap">
+    <div class="planos-grid">
       <div class="plano">
-        <span class="plano-badge">⭐ OFERTA ÚNICA</span>
+        <div class="plano-header"><h3>Plano Básico</h3></div>
+        <ul>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 Vídeos Objetos Falantes</li>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10 Posts</li>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 Stories</li>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10 Legendas</li>
+        </ul>
+        <div class="plano-preco-box"><p class="plano-de">De R$67,00</p><p class="plano-valor">R$10</p><p class="plano-tipo">Pagamento único</p></div>
+        <a href="upsell.html" class="btn-cta" style="max-width:100%;">QUERO ESSA OPÇÃO</a>
+      </div>
+      <div class="plano destaque">
+        <span class="plano-badge">⭐ MELHOR OFERTA</span>
         <div class="plano-header"><h3>Pacote Completo</h3></div>
         <ul>
+          <li style="font-weight:800;color:var(--verde)"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>✅ Tudo do Plano Básico e muito mais</li>
           <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos de Objetos Falantes para Empresas de Segurança Eletrônica</li>
           <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Destaques para Bio no Instagram</li>
                     <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 1: Calculadora de Preços e Lucro</li>
@@ -356,13 +376,12 @@ footer a{color:var(--verde);text-decoration:underline}
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Protocolo de Atendimento</li>
           <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#34D399" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 7: Biblioteca de Respostas para WhatsApp</li>
         </ul>
-                <div class="plano-preco-box"><p class="plano-de">Pagamento único • Sem mensalidade</p><p class="plano-valor">R$27,90</p><p class="plano-tipo">Acesso imediato após a confirmação</p></div>
+        <div class="plano-preco-box"><p class="plano-de">Pagamento único • Sem mensalidade</p><p class="plano-valor">R$27,90</p><p class="plano-tipo">Acesso imediato após a confirmação</p></div>
         <a href="https://app.mivvo.com.br/checkout/01a0e2fa-6671-702d-838b-11dc13a180dd" class="btn-cta" style="max-width:100%;">SIM! QUERO MEU PACOTE AGORA!</a>
+        <div class="selo-seguranca"><span>✅ Compra 100% segura</span><span>⚡ Receba em menos de 2 minutos</span><span>✅ Pix seguro</span></div>
         <p class="plano-rodape">Você não vai encontrar esse preço depois</p>
       </div>
     </div>
-  </div>
-</section>
 
 <section class="secao bg-branco">
   <div class="container">
@@ -396,6 +415,7 @@ footer a{color:var(--verde);text-decoration:underline}
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Os vídeos funcionam para qualquer cidade?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Os objetos falantes não citam localização, então funcionam para qualquer cidade do Brasil. O algoritmo das redes entrega para pessoas da sua região automaticamente.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">E se eu não gostar? Tem garantia?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolvemos 100% do seu dinheiro. Sem burocracia.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Preciso ter equipamento profissional para gravar algo parecido?<span class="faq-icone">+</span></button><div class="faq-resposta">Não! Os vídeos já vêm prontos e editados. Você não precisa gravar, filmar ou editar nada — é só baixar o vídeo pronto e publicar nas suas redes.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Qual a diferença entre o Plano Básico e o Pacote Completo?<span class="faq-icone">+</span></button><div class="faq-resposta">O Plano Básico inclui 5 vídeos, 10 posts, 5 stories e 10 legendas — ideal para testar. O Pacote Completo tem tudo do básico e muito mais, incluindo todos os bônus exclusivos.</div></div>
     </div>
     <div class="text-center mt-32"><a href="https://app.mivvo.com.br/checkout/01a0e2fa-6671-702d-838b-11dc13a180dd" class="btn-cta">👉 QUERO GARANTIR MEU PACOTE AGORA</a></div>
   </div>
@@ -431,5 +451,88 @@ function toggleBonusNovo(el){
   }
 }
 </script>
+<!-- EXIT-POPUP:START -->
+<style>
+.xp-ov{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.xp-ov.xp-on{display:flex;animation:xp-fade .2s ease-out}
+.xp-box{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);overflow:auto;background:#ffffff;color:#111827;border:1px solid #E5E7EB;border-radius:18px;padding:30px 24px 22px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.45);font-family:'Inter',system-ui,sans-serif;animation:xp-pop .25s ease-out}
+.xp-x{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;background:none;color:#6B7280;font-size:26px;line-height:1;cursor:pointer;border-radius:8px}
+.xp-x:hover{color:#111827}
+.xp-tag{display:inline-block;background:var(--verde);color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+.xp-tt{font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(22px,6vw,27px);line-height:1.15;margin:0 0 8px;color:#111827}
+.xp-sub{font-size:14.5px;line-height:1.45;color:#6B7280;margin:0 0 16px}
+.xp-list{list-style:none;margin:0 0 16px;padding:0;text-align:left;display:grid;gap:8px}
+.xp-list li{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid var(--verde);border-radius:12px;background:var(--verde-claro);font-weight:700;font-size:14.5px;color:#111827}
+.xp-list b{font-size:22px;line-height:1}
+.xp-list em{margin-left:auto;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:var(--verde);white-space:nowrap}
+.xp-cta{display:block;background:var(--verde);color:#ffffff!important;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:15px;line-height:1.25;padding:17px 18px;border-radius:12px;text-decoration:none;transition:filter .15s,transform .15s}
+.xp-cta:hover{filter:brightness(0.88);transform:translateY(-2px)}
+.xp-no{margin-top:12px;background:none;border:0;color:#6B7280;font-size:12.5px;text-decoration:underline;cursor:pointer}
+.xp-safe{margin:12px 0 0;font-size:11.5px;color:#6B7280}
+@keyframes xp-fade{from{opacity:0}to{opacity:1}}
+@keyframes xp-pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:380px){.xp-list li{font-size:13.5px;padding:10px 11px}.xp-list em{display:none}}
+@media(prefers-reduced-motion:reduce){.xp-ov.xp-on,.xp-box{animation:none}}
+</style>
+<div class="xp-ov" id="xp-ov" role="dialog" aria-modal="true" aria-labelledby="xp-tt" aria-hidden="true">
+  <div class="xp-box">
+    <button type="button" class="xp-x" id="xp-x" aria-label="Fechar">&times;</button>
+    <span class="xp-tag">🎁 Presente antes de você ir</span>
+    <h2 class="xp-tt" id="xp-tt">Espere! Leve mais 3 bônus de presente</h2>
+    <p class="xp-sub">Garanta o <strong>Pacote Completo</strong> agora e receba também, sem pagar nada a mais:</p>
+    <ul class="xp-list">
+      <li><b>🧮</b>Calculadora de Preços e Lucro<em>Grátis</em></li>
+      <li><b>👥</b>Controle de Clientes e Retornos<em>Grátis</em></li>
+      <li><b>📄</b>Gerador de Orçamentos<em>Grátis</em></li>
+    </ul>
+    <a href="https://app.mivvo.com.br/checkout/01a0e2fa-6671-702d-838b-11dc13a180dd" class="xp-cta" id="xp-cta">SIM! QUERO O PACOTE COMPLETO + OS 3 BÔNUS</a>
+    <button type="button" class="xp-no" id="xp-no">Não, obrigado</button>
+    <p class="xp-safe">✅ Compra 100% segura &nbsp;•&nbsp; 7 dias de garantia</p>
+  </div>
+</div>
+<script>
+(function(){
+  var ov=document.getElementById('xp-ov'); if(!ov) return;
+  var KEY='xp_exit_shown', armed=false, shown=false, lastFocus=null;
+  try{ if(sessionStorage.getItem(KEY)) shown=true; }catch(e){}
+  var touch=('ontouchstart' in window)||navigator.maxTouchPoints>0;
+  function open(){
+    if(shown) return; shown=true;
+    try{ sessionStorage.setItem(KEY,'1'); }catch(e){}
+    lastFocus=document.activeElement;
+    ov.classList.add('xp-on'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var b=document.getElementById('xp-cta'); if(b) b.focus({preventScroll:true});
+  }
+  function close(){
+    ov.classList.remove('xp-on'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow='';
+    if(lastFocus&&lastFocus.focus) try{lastFocus.focus({preventScroll:true});}catch(e){}
+  }
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  document.getElementById('xp-x').addEventListener('click',close);
+  document.getElementById('xp-no').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('xp-on')) close(); });
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href*="/checkout/"]');
+    if(a) shown=true;
+  },true);
+  setTimeout(function(){
+    armed=true;
+    if(touch&&!shown){
+      try{
+        history.pushState({xp:1},'',location.href);
+        window.addEventListener('popstate',function(){
+          if(!shown){ open(); try{history.pushState({xp:1},'',location.href);}catch(e){} }
+        });
+      }catch(e){}
+    }
+  },8000);
+  document.addEventListener('mouseout',function(e){
+    if(armed&&!touch&&!e.relatedTarget&&e.clientY<=0) open();
+  });
+})();
+</script>
+<!-- EXIT-POPUP:END -->
 </body>
 </html>
